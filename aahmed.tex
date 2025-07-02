@@ -1,0 +1,95 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm} \usepackage{paracol}
+
+\iftutex \setmainfont{Lato} \else \usepackage[default]{lato} \fi
+
+\definecolor{LightBlue}{HTML}{1c75bc} \definecolor{SlateGrey}{HTML}{2E2E2E} \definecolor{LightGrey}{HTML}{666666}
+
+\colorlet{heading}{black} \colorlet{headingrule}{black} \colorlet{accent}{LightBlue} \colorlet{emphasis}{SlateGrey} \colorlet{body}{LightGrey} \colorlet{tagline}{LightBlue}
+
+\renewcommand{\cvItemMarker}{{\small\textbullet}} \renewcommand{\cvRatingMarker}{\faCircle}
+\makeatletter
+\renewcommand{\makecvheader}{
+  \begin{center}
+    {\Huge\bfseries\color{name}\MakeUppercase{\@name}}\\[1ex]
+    {\large\bfseries\color{tagline}\@tagline}\\[1ex]
+    \@for\@tempa:=\@personalinfo\do{%
+      \@tempa\hspace{1.5em}%
+    }
+  \end{center}
+}
+\makeatother
+
+
+
+
+\begin{document}
+
+\name{Ahmed Sabry Ahmed} \tagline{B.Sc Computer Science}
+
+\personalinfo{
+  \printinfo{}{{\textcolor{LightBlue}{Email:}} aheshamsabry@gmail.com}
+  \printinfo{}{{\textcolor{LightBlue}{Phone:}} +1 343 777 7734}
+  \printinfo{}{{\textcolor{LightBlue}{Location:}} Hamilton, Ontario, Canada}
+  \printinfo{}{{\textcolor{LightBlue}{GitHub:}} github.com/asabryy}
+  \printinfo{}{{\textcolor{LightBlue}{LinkedIn:}} linkedin.com/in/ahmedsabryahmed}
+  \printinfo{}{{\textcolor{LightBlue}{Website:}} ahmedahmed.ca}
+}
+
+\makecvheader
+
+\AtBeginEnvironment{itemize}{\small} \columnratio{0.6} \begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Desktop Support Analyst}{St Joseph's Healthcare}{June 2024 -- present}{Hamilton, ON} \begin{itemize} \item Deployed internal Git server (Gitea + MySQL), improving collaboration and version tracking for all IT automation scripts. \item Automated printer and user cleanup across 800+ Ricoh printers using PowerShell and Excel, reducing manual workload by over 60\%. \item Built FastAPI service to ingest CSV files from SFTP into SQL, enabling automated reporting and reducing manual data entry. \item Consolidated multi-site printer asset data into an Access database, enhancing auditability and procurement planning. \item Standardized device setup using login scripts and drive mapping (Python, PowerShell, Tinkerer), accelerating deployment time. \item Delivered Tier 2 support for 10+ sites using ServiceNow, SCCM, Intune, Cisco ISE and Exchange, improving issue resolution efficiency. \end{itemize}
+
+\divider
+
+\cvevent{Deployment Technician}{Microserve}{May 2023 -- June 2024}{Victoria, BC} \begin{itemize} \item Deployed and imaged 1,000+ desktops in hospitals, ensuring healthcare compliance. \item Reduced setup time using batch automation for imaging and deployment. \item Maintained endpoint stability and performed clinical/admin system updates. \end{itemize}
+
+\divider
+
+\cvevent{Computer Science Student}{University of Victoria}{Sept 2019 -- May 2023}{Victoria, BC} Studied software development, machine learning, and data analytics through academic projects.
+
+\divider
+
+\cvevent{Software Developer Intern}{Nasser Bin Khalid Co.}{May 2019 -- Aug 2019}{Doha, QA} \begin{itemize} \item Built Java Swing desktop system to digitize shipping workflows. \item Migrated development to Git, enhancing collaboration and version tracking. \end{itemize}
+
+\cvsection{Projects}
+
+\begin{itemize} \item \textbf{Arabic OCR Web App} – FastAPI, React, NLP, Docker, Git, Scikit-learn \item \textbf{GTA Highway Collision Analysis} – R, Tidyverse, SQL, Tableau \item \textbf{Document Search Engine} – Python, Elasticsearch, Kafka, Docker \item \textbf{RDP Web Server} – Python, PicoNet, TCP/IP, Oracle VM \item \textbf{Stock Market Discord Bot} – JavaScript, Node.js, Alpha Vantage API \item \textbf{Group Chat Mobile App} – Java, Android Studio, Firebase \item \textbf{RL-Controlled Car} – Python, Gym Retro, Reinforcement Learning \end{itemize}
+
+\newpage \switchcolumn
+
+\cvsection{Summary} Aspiring Data Analyst and Software Developer with a background in IT infrastructure and automation in healthcare environments. Experienced in collecting, cleaning, and analyzing operational data to support business decisions and improve system efficiency. Skilled in Python, SQL, Excel, Power BI, and automation scripting. Strong foundation in bridging IT operations with data workflows through version control, API development, and reporting tools.
+
+\cvsection{Certificates}
+
+\cvachievement{\faCertificate}{Google Data Analytics Professional Certificate}{Topics: SQL, R, data cleaning, visualization, case studies (Tableau, Power BI)}
+
+\divider
+
+\cvachievement{\faCertificate}{Stanford Online – Supervised Machine Learning}{Regression, classification, loss functions, model evaluation}
+
+\cvsection{Skills}
+
+{\LaTeXraggedright \cvtag{Problem Solving} \cvtag{Communication} \cvtag{Process Optimization} \cvtag{Pattern Recognition} \cvtag{Quick Learner} \par}
+
+\divider\smallskip
+
+\cvtag{Python} \cvtag{Java} \cvtag{JavaScript} \cvtag{HTML/CSS} \cvtag{Power BI} \cvtag{Tableau} \cvtag{Data Cleaning} \cvtag{Feature Engineering} \cvtag{Model Evaluation} \cvtag{Supervised Learning} \cvtag{REST APIs} \cvtag{Git} \cvtag{SQL/MySQL} \cvtag{CI/CD}
+
+\cvsection{Languages}
+
+\cvskill{English}{5} \cvskill{Arabic}{4}
+
+\cvsection{Education}
+
+\cvevent{B.Sc. in Computer Science}{University of Victoria}{Sept 2019 -- May 2023}{}
+
+\end{paracol}
+
+\end{document}
+
